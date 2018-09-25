@@ -1,0 +1,7 @@
+{
+  "name": "TransformeSe",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
