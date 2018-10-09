@@ -1,12 +1,50 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+    <ion-header >
+        <div class="divTitulo">
+            <p class="titulo">Infoprodutos</p>
+            <p class="subTitulo">{{ tema }}</p>
+        </div>
+        <div class="divFiltros">
+          <div *ngIf="filtroPrincipal == 'financeiro'"  class="filtro" style="width: 60%;">Mais Baratos<img class="iconFiltroFinal" style="height: 70%" src="assets/img/cash.png"></div>
+          <div *ngIf="filtroPrincipal == 'destaques'" class="filtro" style="width: 60%;">Destaques<ion-icon class="iconFiltroFinal" name="md-flame"></ion-icon></div>
+          <div *ngIf="filtraGarantia" class="filtro"><ion-icon class="iconFiltro" name="close"></ion-icon>Garantia<ion-icon class="iconFiltroFinal" name="ribbon"></ion-icon></div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </ion-header>
+  <ion-content padding>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button class="ion-color ion-color-tertiary hydrated">
+        <ion-icon name="funnel"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button (click)="mudaFiltroPrincipal('financeiro')" color="secondary"><img style="height: 70%" src="assets/img/cash.png"></ion-fab-button>
+        <ion-fab-button (click)="mudaFiltroPrincipal('destaques')" color="danger"><ion-icon name="md-flame"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button (click)="mudaFiltroGarantia()" [color]="filtraGarantia ? 'warning' : 'light'"><ion-icon name="ribbon"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    <div *ngFor="let produto of produtos">
+      <div class="divProduto">
+          <p class="txtTitulo">{{ produto.Nome }}</p>
+          <p class="txtObs">Clique para expandir</p>
+          <a href="https://placeholder.com"><img src="{{ produto.Imagem }}"></a>
+          <div>
+            <div class="produtoEstrelas">
+              <div class="EstrelasNumero"><p>{{ produto.Estrelas }}</p></div>
+              <div class="EstrelasImagem"><ion-icon ios="ios-star" md="md-star"></ion-icon></div>
+            </div>
+            <div class="produtoPreco">
+                <img src="assets/img/cifrao{{ produto.Valor }}.png">
+            </div>
+            <div *ngIf="produto.Garantia" class="produtoGarantia">
+                <img src="assets/img/garantia.jpg">
+            </div>
+          </div>
+          <button type="button" class="btnSaibaMais">Saiba mais</button>
+          <button type="button" class="btnAvalie">Deixe uma nota</button>
+      </div>
+    </div>
 </ion-content>

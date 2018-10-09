@@ -1,1 +1,116 @@
-
+*{
+    text-align: center;
+    font-family: Bilcase;
+}
+ion-content{
+    background-color: #ecc184;
+}
+ion-header{
+    background-color: #d8a55d;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.divTitulo{
+    height: 15%;
+}
+.titulo{
+    font-size: 8vh;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+.subTitulo{
+    font-size: 3vh;
+    margin-block-start: 0px;
+    margin-block-end: 10px;
+}
+.divFiltros{
+    height: 5%;
+    font-size: 5vw;
+}
+.filtro{
+    background-color: #ccc7c7;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 30%;
+    margin-left: 3%;
+    float: left;
+    padding-bottom: 1%;
+    position: relative;
+}
+.iconFiltro{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;;
+}
+.iconFiltroFinal{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;;
+}
+.divProduto{
+    font-size: 6vw;
+    width: 45%;
+    margin-left: 2.5%;
+    background-color: white;
+    float: left;
+    margin-top: 2.5%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.btnSaibaMais{
+    font-size: 4vw;
+    width: 90%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #eaa81b;
+}
+.txtTitulo{
+    margin-block-end: 0px;
+}
+.txtObs{
+    font-size: 2.5vw;
+    margin-block-start: 0px;
+}
+.btnAvalie{
+    font-size: 4vw;
+    width: 90%;
+    margin-left: 2.5%;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    background-color: #ff5f2e;
+}
+.produtoEstrelas{
+    margin-left: 5%;
+    width: 45%;
+    float: left;
+}
+.produtoPreco{
+    width: 15%;
+    float: left;
+}
+.produtoGarantia{
+    margin-right: 10%;
+    width: 15%;
+    float: right;
+}
+.EstrelasNumero{
+    padding-left: 4%;
+    width: 40%;
+    float: left;
+}
+.EstrelasNumero p{
+    top: 10%;
+    transform: translateY(-10%);
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+.EstrelasImagem{
+    width: 60%;
+    text-align: left;
+    float: left;
+}
